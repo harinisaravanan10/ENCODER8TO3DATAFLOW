@@ -18,6 +18,7 @@ Figure 01  Block Diagram of Encoder 8 * 3
 
 **Truth Table**
 
+
 ![image](https://github.com/naavaneetha/ENCODER8TO3DATAFLOW/assets/154305477/35496b14-ae6e-4cd1-9abd-d6736b576575)
 
 The logical expression of the term A0, A1, and A2 are as follows:
@@ -35,22 +36,39 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
+```
+1.Type the program in Quartus software.
+2.Compile and run the program.
+3.Generate the RTL schematic and save the logic diagram.
+4.Create nodes for inputs and outputs to generate the timing diagram.
+5.For different input combinations generate the timing diagram.
 
-/* write all the steps invloved */
-
+```
 **PROGRAM**
-
+```
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+module encoder_top(din, a, b, c); 
+input [0:7] din; 
+output a,b,c; 
+assign a=din[4] | din[5] | din[6] | din[7]; 
+assign b=din[2] | din[3] | din[6] | din[7];
+assign c=din[2] | din[4] | din[6] | din[7];
+endmodule
 
-Developed by: RegisterNumber:
-*/
-
+Developed by: HARINI S RegisterNumber:212223040058*/
+```
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+
+![image](https://github.com/harinisaravanan10/ENCODER8TO3DATAFLOW/assets/149035598/8c658ad1-6d90-4d5c-a18f-0e09d45c7886)
+
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
 
+![image](https://github.com/harinisaravanan10/ENCODER8TO3DATAFLOW/assets/149035598/04a324ac-4643-4768-b9fe-51dcd9894777)
+
+
 **RESULTS**
 
-
+The code is executed successfully
 
 
